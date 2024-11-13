@@ -1,0 +1,377 @@
+body{
+    background-image: url("../images/bg.png");
+    background-size: cover;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Navbar*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 250ms;
+    border: 3px solid #2B8F6B;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 4px 5px 4px #4c4a4a;
+    z-index: 30;
+}
+.sticky{
+    border: 3px solid #2B8F6B;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 3px 4px 4px #4c4a4a;
+}
+.nav-links{
+    background-color: #4c4a4a;
+    position: absolute;
+    right: 0;
+    top: 9vh;
+    width: 50%;
+    height: 50vh;
+    list-style: none;
+    z-index: 30;
+    border-radius: 10px;
+    border: 2px dotted #4ECB71;
+    box-shadow: 3px 3px 4px 4px #4c4a4a;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: menu_animation 500ms ease-in-out;
+}
+header ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: 250ms;
+}
+.nav-links li a:hover{
+    color: #4ECB71;
+    box-shadow: 2px 2px #4ECBCB;
+}
+.nav-links li .button{
+    border: 3px solid #4ECB71;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px  #4ECBCB;
+    padding: 8px;
+}
+.nav-links li .button:hover{
+    background-image: linear-gradient(#4ECB71,#4ECBCB);
+    color: #000;
+}
+.hamburger-on{
+    background: url("../images/hamburger-on.png");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+.show-navlinks{
+    display: flex;
+}
+@keyframes menu_animation{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+
+}
+.hamburger-off{
+    padding: 9px;
+    background: url("../images/close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+@media screen and (min-width:700px) {
+    header{
+        border: 3px solid #2B8F6B;
+        backdrop-filter: blur(20px);
+        box-shadow: 3px 3px 3px #000;
+        z-index: 30;
+    }
+    .nav-links{
+        background:none;
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: auto;
+        height: auto;
+        border: none;
+        box-shadow: none;
+        z-index: 30;
+        font-size: 0.8rem;
+    }
+    header ul{
+        display: flex;
+    }
+    header ul li{
+        margin: 0;
+    }
+    header ul li a{
+        padding: 0;
+        margin: 3px 15px;
+        font-size: 1rem;
+    }
+    .hamburger-on{
+        display: none;
+    }
+}
+
+/*Mission*/
+.mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mission-content {
+    display: flex; /* Keep flexbox layout */
+    align-items: center; /* Align items vertically centered */
+    background-image: linear-gradient(rgba(14, 15, 15, 0.5), rgba(194, 196, 197, 0.9));
+    margin-top: 5rem;
+    width: 80%;
+    max-width: 800px; /* Optional: limit the maximum width */
+    border-radius: 12px;
+    border: 3px solid #e8e9ea;
+    box-shadow: 0 5px 7px 5px #69696A, inset 3px 4px 0 4px rgba(0,0,0,0.4);
+    padding: 2rem; /* Add padding for spacing */
+   
+}
+
+.mission-img,.core-img {
+    height: 12rem; /* Fixed height for image */
+    width: 14rem; /* Fixed width for image */
+    margin-right: 2rem; /* Space between image and text */
+}
+
+.text {
+    display: flex; /* Use flexbox for text */
+    flex-direction: column; /* Stack text vertically */
+    align-items: flex-end; /* Align text to the right */
+    width: 100%; /* Take full width of container */
+}
+
+.text h1 {
+    color: #4ECB71;
+    margin-right: 6rem;
+    text-align: left; /* Align text to the right */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline dashed;
+}
+
+.text p {
+    color: #fff;
+    font-weight: 500;
+    margin-right: 2rem; 
+    text-align: justify; 
+    word-break: keep-all;
+    width: 90%; 
+}
+/*Core Values*/
+.text .core {
+    color: #4ECB71;
+    margin-right: 10rem;
+    text-align: left; /* Align text to the right */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline dashed;
+}
+.text ul {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    gap: 2px;
+    text-align: justify; 
+    word-break: keep-all;
+    width: 90%; 
+    list-style:circle;
+    margin-left: 2rem;
+}
+.text .uvp{
+    margin-right: 4rem;
+}
+canvas {
+    width: 100% !important; /* Make the canvas responsive */
+    height: 400px; /* Set a fixed height for the chart */
+}
+.chart{
+    margin-bottom: 5rem;
+}
+.topic{
+    margin-top: 3rem;
+    color: #4ECB71;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    text-decoration: underline dashed;
+    box-shadow:2px -2px 2px#4ECBCB;
+    width: 100%;
+    text-align: center
+}
+/*Footer*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(#000,#353131,#797373);
+    position: relative;
+}
+footer img{
+    float: left;
+    margin-left: 0.3rem;
+}
+footer h3{
+    color: #4ECB71;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    position: absolute; /* Added */
+    top: 30%; 
+    left: 4%;
+}
+.social{
+    color: #4ECB71;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 0.7rem;
+    margin-left: 0.3rem;
+}
+footer a{
+    color: #4ECB71;
+}
+footer a:hover{
+    background-image: linear-gradient(rgb(45, 45, 163),rgb(74, 109, 155),rgb(53, 122, 151));
+    padding: 10px;
+}
+footer .insta:hover{
+    background-image: linear-gradient(rgb(203, 45, 71),rgb(169, 87, 122),pink);
+    padding: 10px;
+}
+footer .x:hover{
+    background-image: linear-gradient(rgb(130, 115, 115),rgb(162, 152, 152),white);
+    padding: 10px;
+}
+
+@media (max-width: 575.98px) { 
+    footer h3{
+        left: 12%;
+    }
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    footer h3{
+          left: 10%;
+    }
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    footer h3{
+        left: 8%;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .mission-content {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .mission-img, .core-img {
+        height: 8rem; /* Further adjust image height */
+        width: 10rem; /* Further adjust image width */
+    }
+
+    .text h1, .text .core {
+        font-size: 1.5rem; /* Reduce heading font size */
+    }
+
+    .text p, .text ul {
+        font-size: 0.9rem; /* Reduce text and list font size */
+    }
+
+    canvas {
+        height: 250px; /* Reduce canvas height */
+    }
+
+    .topic {
+        font-size: 2rem; /* Reduce heading font size */
+    }
+    .text h1{
+        margin-right: 10rem;
+    }
+    .text .core{
+        margin-right: 14rem;
+    }
+    .text .uvp{
+        margin-right: 8rem;
+    }
+}
+
+/* Media Query for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .mission-content {
+        width: 95%; /* Increase width to fit smaller screens */
+        padding: 1rem; /* Adjust padding for very small screens */
+    }
+
+    .mission-img, .core-img {
+        height: 6rem; /* Further adjust image height */
+        width: 8rem; /* Further adjust image width */
+    }
+
+    .text h1, .text .core {
+        font-size: 1rem; /* Further reduce heading font size */
+    }
+
+    .text p, .text ul {
+        font-size: 0.8rem; /* Further reduce text and list font size */
+    }
+
+    canvas {
+        height: 200px; /* Further reduce canvas height */
+    }
+
+    .topic {
+        font-size: 1.8rem; /* Further reduce heading font size */
+    }
+    .text h1{
+        margin-right: 5rem;
+    }
+    .text .core{
+        margin-right: 7rem;
+    }
+    .text .uvp{
+        margin-right: 4rem;
+    }
+}
