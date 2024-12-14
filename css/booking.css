@@ -1,0 +1,303 @@
+body{
+    background-image: url("../images/bg.png");
+    background-size: cover;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Navbar*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 250ms;
+    border: 3px solid #2B8F6B;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 4px 5px 4px #4c4a4a;
+    z-index: 30;
+}
+.sticky{
+    border: 3px solid #2B8F6B;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 3px 3px 4px 4px #4c4a4a;
+}
+.nav-links{
+    background-color: #4c4a4a;
+    position: absolute;
+    right: 0;
+    top: 9vh;
+    width: 50%;
+    height: 50vh;
+    list-style: none;
+    z-index: 30;
+    border-radius: 10px;
+    border: 2px dotted #4ECB71;
+    box-shadow: 3px 3px 4px 4px #4c4a4a;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: menu_animation 500ms ease-in-out;
+}
+header ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: 250ms;
+}
+.nav-links li a:hover{
+    color: #4ECB71;
+    box-shadow: 2px 2px #4ECBCB;
+}
+.nav-links li .button{
+    border: 3px solid #4ECB71;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px  #4ECBCB;
+    padding: 8px;
+}
+.nav-links li .button:hover{
+    background-image: linear-gradient(#4ECB71,#4ECBCB);
+    color: #000;
+}
+.hamburger-on{
+    background: url("../images/hamburger-on.png");
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+.show-navlinks{
+    display: flex;
+}
+@keyframes menu_animation{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+
+    }
+
+}
+.hamburger-off{
+    padding: 9px;
+    background: url("../images/close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+@media screen and (min-width:700px) {
+    header{
+        border: 3px solid #2B8F6B;
+        backdrop-filter: blur(20px);
+        box-shadow: 3px 3px 3px #000;
+        z-index: 30;
+    }
+    .nav-links{
+        background:none;
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: auto;
+        height: auto;
+        border: none;
+        box-shadow: none;
+        z-index: 30;
+        font-size: 0.8rem;
+    }
+    header ul{
+        display: flex;
+    }
+    header ul li{
+        margin: 0;
+    }
+    header ul li a{
+        padding: 0;
+        margin: 3px 15px;
+        font-size: 1rem;
+    }
+    .hamburger-on{
+        display: none;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(#000,#353131,#797373);
+    position: relative;
+}
+footer img{
+    float: left;
+    margin-left: 0.3rem;
+}
+footer h3{
+    color: #4ECB71;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    position: absolute; /* Added */
+    top: 30%; 
+    left: 4%;
+}
+.social{
+    color: #4ECB71;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 0.7rem;
+    margin-left: 0.3rem;
+}
+footer a{
+    color: #4ECB71;
+}
+footer a:hover{
+    background-image: linear-gradient(rgb(45, 45, 163),rgb(74, 109, 155),rgb(53, 122, 151));
+    padding: 10px;
+}
+footer .insta:hover{
+    background-image: linear-gradient(rgb(203, 45, 71),rgb(169, 87, 122),pink);
+    padding: 10px;
+}
+footer .x:hover{
+    background-image: linear-gradient(rgb(130, 115, 115),rgb(162, 152, 152),white);
+    padding: 10px;
+}
+
+@media (max-width: 575.98px) { 
+    footer h3{
+        left: 12%;
+    }
+ }
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    footer h3{
+          left: 10%;
+    }
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    footer h3{
+        left: 8%;
+    }
+ }
+
+ .booking-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+              background: linear-gradient(rgba(198, 197, 197, 0.8), rgba(172, 169, 169, 0.8)), url('../images/main.png');
+              background-repeat: no-repeat;
+              background-size: cover;
+              font-family: 'Open Sans', sans-serif;
+              font-size: 1.2rem;
+              line-height: 1.618;
+              color: rgb(2, 2, 2);
+          }
+  
+  h1 {
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  form {
+    width: 60vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 1.2rem 0;
+  }
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+      margin: 0.5rem 0;
+    
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 7px 0 0 15px;
+      width: 100%;
+    min-height: 2em;
+    background-color: #fbf9f9;
+  }
+  
+  select, .room {
+              width: 7rem;
+        padding: 5px;
+              border: none;
+              background-color: rgba(255, 255, 255);
+        box-shadow: rgba(0,0,0,.1) 0 0 8px;			
+          }
+  select {           
+              position: relative;
+        border-radius: 5px;
+        display: inline-block;
+          }
+  
+  input, textarea {
+    border: none;
+    border-radius: 5px;
+    color: rgba(6, 6, 6, 0.7);
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.5rem;
+    background-color: #030303;
+    border-color: white;
+    min-width: 300px;
+    color: inherit;
+    font-weight: bold;
+    color: #fbf9f9;
+  }
+
+
+  
