@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../images/bg.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    animation: rotate 2s linear;
+}
+@keyframes rotate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #4ECB71;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate 8s linear;
+}
+@keyframes animate
+{
+    0%,100%{
+        stroke-dashoffset: 440;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    50.1%{
+        stroke-dashoffset: 880;
+    }
+}
+#message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+#message h1 {
+    font-size: 1.5em;
+    color: #4ECB71;
+}
+#message button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    background-color: #4ECB71;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#message button:hover {
+    background-color: #3CA960;
+}

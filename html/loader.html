@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../css/loader.css">
+</head>
+<body>
+    <svg>
+        <circle cx="70" cy="70" r="70"></circle>
+    </svg>
+    
+    <div id="message">
+        <h1>Charging slot reserved successfully!</h1><br><br>
+        <button onclick="redirectToHomepage()">Click here to redirect to homepage</button>
+    </div>
+    
+    <script>
+        
+        setTimeout(() => {
+            document.querySelector("svg").style.display = "none"; 
+            document.getElementById("message").style.display = "block"; 
+        }, 8000);
+
+        
+        function redirectToHomepage() {
+            window.location.href = "../index.html"; 
+        }
+    </script>
+</body>
+</html>
