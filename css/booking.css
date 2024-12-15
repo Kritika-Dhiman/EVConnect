@@ -292,11 +292,11 @@ footer .x:hover{
     height: 2em;
     font-size: 1.5rem;
     background-color: #4ECB71;
-    border-color: #000;
+    border-color: white;
     min-width: 300px;
     color: inherit;
     font-weight: bold;
-    color: #fbf9f9;
+    color: #000;
   }
 
 
