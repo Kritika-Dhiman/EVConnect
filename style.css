@@ -199,7 +199,9 @@ span{
     font-weight: bold;
     letter-spacing: 6px;
 }
-
+.sign-up button a{
+    color: #4ECB71;
+}
 .sign-up button{
     justify-content: center;
     align-items: center;
