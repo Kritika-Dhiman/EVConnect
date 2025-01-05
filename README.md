@@ -4,7 +4,7 @@ EvConnect is a user-friendly responsive web platform designed to simplify the pr
 Features:
 1) Real Time Availability- Locate nearby charging stations with up-to-date availability.
 2) Search Filter- Find stations based on loaction
-3) Booking- Reserve chargign slots in advance
+3) Booking- Reserve charging slots in advance with payment ui
 4) Responsive Design: Optimized for a seamless experience across all devices, including mobile, tablet, and desktop.
 5) Eco-friendly: Supports sustainable transportation by making EV charging more accessible.
 
